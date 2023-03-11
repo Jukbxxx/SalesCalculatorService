@@ -51,7 +51,7 @@ public class SalesCalculatorService {
         return belowAverageNumber;
     }
 
-    public int getMonthAboveAverage(long[] sales) {
+    public int getMonthsAboveAverage(long[] sales) {
         int aboveAverageNumber = 0; // количество месяцев с продажами выше среднего
         int salesAverage = getAverageSales(sales);
 

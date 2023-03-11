@@ -73,7 +73,7 @@ public class SalesCalculatorServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAboveAverageNumber = 5;
-        int actualAboveAverageNumber = service.getMonthAboveAverage(sales);
+        int actualAboveAverageNumber = service.getMonthsAboveAverage(sales);
 
         Assertions.assertEquals(expectedAboveAverageNumber, actualAboveAverageNumber);
 
