@@ -41,9 +41,10 @@ public class SalesCalculatorService {
 
     public int getMonthsBelowAverage(long[] sales) {
         int belowAverageNumber = 0; // количество месяцев с продажами ниже среднего
+        int salesAverage = getAverageSales(sales); //переменная для хранения среднего количества продаж
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < getAverageSales(sales)) { // берем среднее значение, получаемое при помощи нашего метода выше
+            if (sales[i] < salesAverage) {
                 belowAverageNumber = belowAverageNumber + 1; // если продажи в рассматриваемом месяца были ниже среднего, прибавляем 1
             }
         }
@@ -52,9 +53,10 @@ public class SalesCalculatorService {
 
     public int getMonthAboveAverage(long[] sales) {
         int aboveAverageNumber = 0; // количество месяцев с продажами выше среднего
+        int salesAverage = getAverageSales(sales);
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < getAverageSales(sales)) { // логика по аналогии с методом выше
+            if (sales[i] > salesAverage) { // логика по аналогии с методом выше
                 aboveAverageNumber = aboveAverageNumber + 1;
             }
         }
